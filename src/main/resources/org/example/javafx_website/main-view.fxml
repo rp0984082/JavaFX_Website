@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.javafx_website.Controller"
+      style="-fx-padding: 10;">
+
+    <!-- URL Bar -->
+    <HBox spacing="10">
+        <!-- TextField for entering URLs -->
+        <TextField fx:id="textField" promptText="Enter URL"/>
+        <!-- Button to load the page -->
+        <Button text="Load" onAction="#loadPage"/>
+
+        <!-- Button to refresh the page -->
+        <Button text="Refresh" onAction="#reloadPage"/>
+    </HBox>
+
+    <!-- WebView to display the web page -->
+    <WebView fx:id="webView" prefHeight="500"/>
+
+    <!-- Controls -->
+    <HBox spacing="10" alignment="CENTER">
+        <!-- Button to Zoom In the page -->
+        <Button text="Zoom In" onAction="#zoomIn"/>
+
+        <!-- Button to Zoom Out the page -->
+        <Button text="Zoom Out" onAction="#zoomOut"/>
+
+        <!-- Button to Go Back the page -->
+        <Button text="History" onAction="#displayHistory"/>
+
+        <!-- Button to Go Back the page -->
+        <Button text="Back" onAction="#back"/>
+
+        <!-- Button to Go Forward the page -->
+        <Button text="Forward" onAction="#forward"/>
+
+        <!-- Button to Execute JS the page -->
+        <Button text="Execute JS" onAction="#executeJS"/>
+    </HBox>
+
+</VBox>
